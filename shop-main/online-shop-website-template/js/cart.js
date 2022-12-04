@@ -3,7 +3,7 @@ const getShipping = () => {
 };
 
 const getSubTotal = () => {
-  return products.map((p) => p.price * p.quantity).reduce((a, e) => (a += e));
+  return products.map((p) => p.price * p.quantity).reduce((a, e) => (a += e),0);
 };
 
 const getTotal = () => getShipping() + getSubTotal();
